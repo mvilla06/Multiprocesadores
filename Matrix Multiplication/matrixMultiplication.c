@@ -120,13 +120,13 @@ int main(){
     }
     y3 = clock();
     printf("%d\t%ld\t%ld\t%ld\n", x, y1-x1, y2-x2, y3-x3);
-    avg1+=(y1-x1)/5;
-    avg2+=(y2-x2)/5;
-    avg3+=(y3-x3)/5;
+    avg1+=(y1-x1);
+    avg2+=(y2-x2);
+    avg3+=(y3-x3);
     }
     //Revisar resultados
 
-    printf("Avg\t%ld\t%ld\t%ld\n", avg1, avg2, avg3);
+    printf("Avg\t%ld\t%ld\t%ld\n", avg1/5, avg2/5, avg3/5);
     printf("%% Serial\t-\t%f\t%f\n",  (float)avg2/avg1, (float)avg3/avg1);
     int correct1 = 1;
     for(int i = 0; i < rowA; i++)
